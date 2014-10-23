@@ -8,7 +8,7 @@
 
 		<!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
 		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
 		<![endif]-->
 
 		<!-- Le styles -->
@@ -90,7 +90,7 @@
             </div>
             <!-- END OF AUTHENTICATION MODAL -->
 		</div>
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="{{url_base}}/media/bootstrap-modal.js"></script>
 		<script type="text/javascript" src="{{url_base}}/media/jQuery.validity.min.js"></script>
         <script type="text/javascript">
