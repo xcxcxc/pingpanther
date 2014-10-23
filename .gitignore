@@ -162,3 +162,12 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+.idea/.name
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/pingpanther.iml
+.idea/scopes/scope_settings.xml
+.idea/vcs.xml
+.idea/*
+

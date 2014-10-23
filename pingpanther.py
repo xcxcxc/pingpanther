@@ -785,4 +785,4 @@ if runAsCGI:
     run(server=CGIServer)
 else:
     url_base = ''
-    run(host='localhost', port=8080, reloader=True)
+    run(host='localhost', port=10086, reloader=True)
