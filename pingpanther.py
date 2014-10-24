@@ -578,6 +578,9 @@ def index(db):
 	cron_status, local_last_run = get_cron_status(db)
 	settings = get_settings(db)
 
+	print(dir(local_last_run))
+	local_last_run -= timedelta(hours=40)
+
 	# Check password authentication
 	authenticated = authenticate(request, settings)
 
