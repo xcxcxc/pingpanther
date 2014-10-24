@@ -206,9 +206,9 @@ def send_email(site, new_state):
 		if not server:
 			return
 
-		msg = 'Status of %s site has changed from %s to %s' % (site['url'], site['current_state'], new_state)
+		msg = 'Status of %s site has changed from %s to %s' % (site.get('url'), site.get('current_state'), new_state)
 		msg = MIMEText(msg)
-		msg['Subject'] = 'Pingpanther: %s is %s!' % (site['url'], new_state)
+		msg['Subject'] = 'Pingpanther: %s is %s!' % (site.get('url'), new_state)
 		msg['From'] = sender
 		msg['To'] = toaddrs
 

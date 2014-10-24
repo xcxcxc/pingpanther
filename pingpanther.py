@@ -65,7 +65,7 @@ def send_test_email(db, option):
 	if option == 'python':
 		from checker import send_email, init_db
 		init_db()
-		send_email([], '', True)
+		send_email({}, '')
 		redirect('/settings')
 	elif option == 'php':
 		url = "http://templeclan.com/pingpanther/send_mail.php?do=send"
