@@ -90,7 +90,7 @@
             </div>
             <!-- END OF AUTHENTICATION MODAL -->
 		</div>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="{{url_base}}/media/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="{{url_base}}/media/bootstrap-modal.js"></script>
 		<script type="text/javascript" src="{{url_base}}/media/jQuery.validity.min.js"></script>
         <script type="text/javascript">

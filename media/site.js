@@ -152,6 +152,7 @@ function add_site()
     var frequency = $('#addsite_form .form_frequency').val();
     var fail_trigger = $('#addsite_form .form_fail_trigger').val();
     var respond_seconds = $('#addsite_form .form_respond_seconds').val();
+    var site_desc = $('#addsite_form .form_site_desc').val();
     var tags = $('#addsite_form .form_tags').val();
 
     if (isAddSiteLoading == true) return;
@@ -167,6 +168,7 @@ function add_site()
             "fail_trigger": fail_trigger,
             "respond_seconds": respond_seconds,
             "tags": tags,
+            "site_desc": site_desc,
         },
         success: function(data) 
         {
@@ -188,6 +190,7 @@ function add_site()
                 row += "' data-site=" + data.id + "'>"
                 // url
                 row += "<td><a href='" + data.url + "' flag='site' target='_blank' class='site_url'>" + data.url + "</a></td>"
+                row += "<td>"+data.desc+"</td>"
                 // status
                 if (data.state=='down')
                 {
@@ -237,6 +240,7 @@ function edit_site(site, orig_url)
     var frequency = $(site + '_form .form_frequency').val();
     var fail_trigger = $(site + '_form .form_fail_trigger').val();
     var respond_seconds = $(site + '_form .form_respond_seconds').val();
+    var site_desc = $(site + '_form .form_site_desc').val();
     var tags = $(site + '_form .form_tags').val();
     
     if (!(validate_site(site + '_form', orig_url)))
@@ -256,6 +260,7 @@ function edit_site(site, orig_url)
             "frequency": frequency,
             "fail_trigger": fail_trigger,
             "respond_seconds": respond_seconds,
+            "site_desc": site_desc,
             "tags": tags,
         },
         success: function(data) 

@@ -54,6 +54,7 @@ def init_db():
 	try:
 		conn = sqlite3.connect(DB_FILE, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
 		conn.row_factory = dict_factory
+		conn.text_factory = str
 		cur = conn.cursor()
 	except:
 		print 'db error'

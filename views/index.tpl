@@ -31,6 +31,7 @@
             <thead>
                 <tr>
                 <th>Site</th>
+                <th>描述</th>
                 <th>Status</th>
                 <th>Uptime</th>
                 <th>Tags</th>
@@ -48,6 +49,12 @@
                     <td>
                         <a href="{{site['url']}}" target="_blank" class="site_url">{{site['url']}}</a>
                     </td>
+
+					<td>
+						%if site['desc']:
+							{{site['desc']}}
+						% end
+					</td>
 
                     %if cron_status=='STOPPED':
                         <td >unknown</td>

@@ -39,7 +39,7 @@
 
     <div class="form_right">
         <div class="form_field">
-            Check Frequency (mins)
+            刷新频率 (mins)
             <input class="input-small form_frequency"
                 name="frequency"
                 type="text"
@@ -50,7 +50,7 @@
                 %end
             />
         </div>
-        <div class="form_field">
+        <div class="form_field" style="display:none;">
             How many fails trigger alert?
             <input class="input-small form_fail_trigger"
                 name="fail_trigger"
@@ -63,15 +63,23 @@
             />
         </div>
         <div class="form_field">
-            Allowed seconds to respond
+            timeout 时长
             <input class="input-small form_respond_seconds"
                 name="respond_seconds"
                 type="text"
                 %if site:
                     value={{site['respond_seconds']}}
                 %else:
-                    value=10
+                    value=60
                 %end
+            />
+        </div>
+		<div class="form_field">
+            描述
+            <input class="input-small form_site_desc"
+                name="site_desc"
+                type="text"
+                value=""
             />
         </div>
     </div>
