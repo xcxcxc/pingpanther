@@ -192,6 +192,8 @@ def send_email(site, new_state):
 		toaddrs = ';'.join(email_list)
 		if not toaddrs:
 			return
+		if not email_list:
+			return
 
 		server = settings['mailserver']['server']
 		port = settings['mailserver']['port']
@@ -216,7 +218,7 @@ def send_email(site, new_state):
 		if username and password:
 			server.login(str(username), str(password))
 
-		server.sendmail(sender, [toaddrs], msg.as_string())
+		server.sendmail(sender, email_list, msg.as_string())
 		server.quit()
 		print 'Mail send successfully!'
 	except Exception, err:
