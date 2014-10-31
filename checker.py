@@ -33,6 +33,7 @@ from datetime import datetime, timedelta
 from settings import DB_FILE, TWILIO_ACCOUNT, TWILIO_TOKEN
 import urllib2
 import urllib
+import re
 
 import requests
 
@@ -182,6 +183,13 @@ def update_site(site, new_state):
 def send_email(site, new_state):
 
 	try:
+
+		# IP域名不发送email
+		regex = r'((25[0-5])|(2[0-4]/d)|(1/d/d)|([1-9]/d)|/d)(/.((25[0-5])|(2[0-4]/d)|(1/d/d)|([1-9]/d)|/d)){3}'
+		if re.match(regex, site.get('url')) != None:
+			return
+
+
 		settings = get_settings()
 		#Get Email Notification fields
 		email_keys = filter(lambda k: 'email' in k, settings['notifications'].keys())
