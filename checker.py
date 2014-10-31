@@ -1,4 +1,5 @@
 #! /usr/bin/python -u
+# -*- coding: utf-8 -*-
 #@+leo-ver=5-thin
 #@+node:climber.20111230205203.1319: * @thin monicheck.py
 #@@first
